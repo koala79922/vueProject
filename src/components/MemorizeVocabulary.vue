@@ -31,8 +31,7 @@
      </b-table>
      <section class="todoapp">
 <!-- main section -->
-    
-    <label>新增單字: </label>
+    <label>新增單字:</label>
     <input class="new-todo"
       autofocus
       autocomplete="off"
@@ -129,7 +128,6 @@ export default {
       e.target.value = ''
     },
     doneEdit (e, todo) {
-      debugger
       const value = e.target.value.trim()
       if (!value) {
         this.removeTodo(todo)
