@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     <router-link :to="{path: '/hello'}">Hello</router-link>
-    <router-link :to="{name: 'c2f'}">CtoF</router-link>
+    <router-link :to="{name: 'MemorizeVocabulary'}">MemorizeVocabulary</router-link>
+    <router-link :to="{name: 'Example'}">Example</router-link>
     <router-view/>
   </div>
 </template>

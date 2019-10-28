@@ -2,7 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Hello from '@/components/Hello'
-import CtoF from '@/components/c2f'
+import MemorizeVocabulary from '@/components/MemorizeVocabulary'
+import Example from '@/components/Example'
 
 Vue.use(Router)
 
@@ -22,9 +23,14 @@ export default new Router({
       component: Hello
     },
     {
-      path: '/c2f',
-      name: 'c2f',
-      component: CtoF
+      path: '/MemorizeVocabulary',
+      name: 'MemorizeVocabulary',
+      component: MemorizeVocabulary
+    },
+    {
+      path: '/Example',
+      name: 'Example',
+      component: Example
     },
     // router 轉址
     { path: '/*', redirect: '/hello' }

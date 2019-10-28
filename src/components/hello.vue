@@ -1,87 +1,11 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}+hello</h1>
-    <h2>{{hello}}</h2>
-    <input type="text" v-model="hello">
-    <input type="checkbox" v-model="toggle">{{toggle}}
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <h1>Page1</h1>
+    <h2>computed練習</h2>
+    <h2 v-if="isMoreThanOne">大於1</h2>
+    <h2>result+1={{addone}}</h2>
+    <div><input type="number" v-model="inputdataone"></div>
+    <button @click="toggleShowMoreThanOne();">檢測是否有大於1</button>
   </div>
 </template>
 
@@ -90,9 +14,19 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
-      hello: 'Hello Vue 2.0',
-      toggle: false
+      inputdataone: 0,
+      toggle: false,
+      isMoreThanOne: true
+    }
+  },
+  computed: {
+    addone () {
+      return parseInt(this.inputdataone) + 1
+    }
+  },
+  methods: {
+    toggleShowMoreThanOne () {
+      this.isMoreThanOne = (this.inputdataone > 1)
     }
   }
 }

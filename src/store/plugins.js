@@ -1,0 +1,11 @@
+import createLogger from '../plugins/logger'
+
+const localStoragePlugin = store => {
+  store.subscribe((mutation, { todos }) => {
+    window.localStorage.setItem('todos-vuejs', JSON.stringify(todos))
+  })
+}
+
+export default process.env.NODE_ENV !== 'production'
+  ? [createLogger(), localStoragePlugin]
+  : [localStoragePlugin]

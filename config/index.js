@@ -6,6 +6,9 @@ const path = require('path')
 
 module.exports = {
   dev: {
+    //禁止使用vue.js
+    useEslint: false,
+
 
     // Paths
     assetsSubDirectory: 'static',
