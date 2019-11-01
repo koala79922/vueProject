@@ -9,7 +9,7 @@ module.exports = {
   dev: {
     //禁止使用vue.js
     useEslint: false,
-
+    publicPath:'123',
 
     // Paths
     assetsSubDirectory: 'static',
@@ -48,16 +48,13 @@ module.exports = {
   },
 
   build: {
-    publicPath: process.env.NODE_ENV === 'production'
-    ? '/vueProject/'
-    : '/',
     // Template for index.html
     index: path.resolve(__dirname, '../docs/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/vueProject/',
 
     /**
      * Source Maps
