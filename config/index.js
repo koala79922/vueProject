@@ -3,11 +3,9 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
-
+console.log(process.env.NODE_ENV);
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/vueProject/'
-    : '/',
+  
   dev: {
     //禁止使用vue.js
     useEslint: false,
@@ -50,6 +48,9 @@ module.exports = {
   },
 
   build: {
+    publicPath: process.env.NODE_ENV === 'production'
+    ? '/vueProject/'
+    : '/',
     // Template for index.html
     index: path.resolve(__dirname, '../docs/index.html'),
 
