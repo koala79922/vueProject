@@ -5,6 +5,9 @@
 const path = require('path')
 
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/vueProject/'
+    : '/',
   dev: {
     //禁止使用vue.js
     useEslint: false,
