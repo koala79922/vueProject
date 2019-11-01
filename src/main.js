@@ -7,9 +7,13 @@ import router from './router'
 import store from './store/index'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+import VueSidebarMenu from 'vue-sidebar-menu'
+import VueMeta from 'vue-meta'
 
 Vue.config.productionTip = false
-
+Vue.use(VueSidebarMenu)
+Vue.use(VueMeta, {refreshOnceOnNavigation: true})
 Vue.use(BootstrapVue)
 /* eslint-disable no-new */
 new Vue({

@@ -59,7 +59,6 @@
 
 <script>
 import {mapState, mapGetters, mapActions} from 'vuex'
-import TodoItem from './TodoItem.vue'
 
 const filters = {
   all: todos => todos,
@@ -69,7 +68,6 @@ const filters = {
 
 export default {
   components: {
-    TodoItem
   },
   data () {
     return {

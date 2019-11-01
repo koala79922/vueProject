@@ -1,7 +1,12 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
-    <input type="text" v-model="hello">
+    <p>使用技術:
+      vue
+      vuex
+      vue-router
+      vue-mata
+    </p>
     <input type="checkbox" v-model="toggle">{{toggle}}
   </div>
 </template>
