@@ -30,7 +30,7 @@ export default {
   methods: {
     login () {
       var xhr = new XMLHttpRequest()
-      xhr.open('POST', 'http://localhost:4040/api/auth/login', true)
+      xhr.open('POST', process.env.BASE_API + '/api/auth/login', true)
       // 发送合适的请求头信息
       xhr.setRequestHeader('Content-type', 'application/json')
       // xhr.withCredentials = true
