@@ -17,6 +17,7 @@
     "bootstrap-vue": "^2.0.4",
     "node-sass": "^4.13.0",
     "vue": "^2.5.2",
+    "vue-google-signin-button-directive": "^1.0.3",
     "vue-meta": "^2.3.1",
     "vue-router": "^3.0.1",
     "vue-sidebar-menu": "^4.4.1",

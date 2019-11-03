@@ -1,12 +1,14 @@
 <template>
   <div id="home" class="home">
     <KVTyper title="Hi! JustinLiu"></KVTyper>
+    <Experiences></Experiences>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import KVTyper from '@/components/KVTyper.vue'
+import Experiences from '@/components/Experiences.vue'
 
 import { WOW } from 'wowjs'
 
@@ -21,7 +23,7 @@ wow.init()
 export default {
   name: 'home',
   components: {
-    KVTyper
+    KVTyper, Experiences
   },
   metaInfo: {
     title: 'HomePage',
