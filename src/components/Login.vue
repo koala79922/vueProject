@@ -53,7 +53,6 @@ export default {
       xhr.send(JSON.stringify({ 'username': this.userName, 'password': this.password }))
     },
     OnGoogleAuthSuccess (idToken) {
-      debugger
       // Receive the idToken and make your magic with the backend
     },
     OnGoogleAuthFail (error) {
