@@ -1,13 +1,10 @@
 <template>
 <header>
     <b-navbar toggleable="sm" type="light" variant="light">
-    <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
-    <b-navbar-brand>Vue SideProject</b-navbar-brand>
-    <b-collapse id="nav-text-collapse" is-nav>
-      <b-navbar-nav>
-          <b-nav-text>
-            <router-link :to="{path: '/hello'}"> Hello |</router-link>
-          </b-nav-text>
+      <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+      <b-navbar-brand>Vue SideProject</b-navbar-brand>
+      <b-collapse id="nav-text-collapse" is-nav>
+        <!-- <b-navbar-nav>
           <b-nav-text>
             <router-link :to="{name: 'MemorizeVocabulary'}"> MemorizeVocabulary |</router-link>
           </b-nav-text>
@@ -15,9 +12,15 @@
             <router-link :to="{name: 'Example'}"> Example</router-link>
           </b-nav-text>
           <b-nav-text>
+            <router-link :to="{path: '/books'}"> book</router-link>
+          </b-nav-text>
+        </b-navbar-nav> -->
+
+        <b-navbar-nav class="ml-auto" right>
+          <b-nav-text >
             <a href="" @click.prevent="logout">Logout</a>
           </b-nav-text>
-        </b-navbar-nav>
+         </b-navbar-nav>
       </b-collapse>
     </b-navbar>
   </header>

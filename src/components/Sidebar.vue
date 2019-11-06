@@ -15,17 +15,21 @@ export default {
         },
         {
           href: '/',
-          title: 'Dashboard',
-          icon: 'fa fa-user'
+          title: 'Home',
+          icon: 'fa fa-home'
         },
         {
           href: '/charts',
-          title: 'Charts',
+          title: 'CRUD練習',
           icon: 'fa fa-chart-area',
           child: [
             {
-              href: '/charts/sublink',
-              title: 'Sub Link'
+              href: '/MemorizeVocabulary',
+              title: 'CRUD TODO ITEM'
+            },
+            {
+              href: '/books',
+              title: 'CRUD NODEJS RESTFUL API'
             }
           ]
         }

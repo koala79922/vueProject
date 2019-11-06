@@ -1,7 +1,7 @@
 <template>
   <div class="MemorizeVocabulary">
      <!-- header -->
-    <header class="header">
+    <header>
       <h1>MemorizeVocabulary</h1>
     </header>
     <section class="main" v-show="todos.length">
@@ -39,19 +39,6 @@
       @keyup.enter="addTodo">
     <!-- footer -->
     <footer class="footer" v-show="todos.length">
-      <ul class="filters">
-        <!--eslint-disable-next-line-->
-        <li v-for="(val, key) in filters" :key='key'>
-          <a :href="'#/' + key"
-            :class="{ selected: visibility === key }"
-            @click="visibility = key">{{ key | capitalize }}</a>
-        </li>
-      </ul>
-      <button class="clear-completed"
-        v-show="todos.length > remaining"
-        @click="clearCompleted">
-        Clear completed
-      </button>
     </footer>
   </section>
   </div>
@@ -151,6 +138,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+header{
+  margin-top: 50px
+}
 h1, h2 {
   font-weight: normal;
 }

@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import 'bootstrap-css-only/css/bootstrap.css'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 
 // import module
